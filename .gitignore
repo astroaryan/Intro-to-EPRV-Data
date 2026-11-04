@@ -1,0 +1,8 @@
+# Large spectral arrays stay local.
+*.npy
+
+# macOS and notebook-generated files.
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
