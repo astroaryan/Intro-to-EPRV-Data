@@ -14,6 +14,8 @@ Stellar variability, instrumental variability, and other processes can make radi
 
 The dataset uses NEID observations of the Sun using the NEID solar archive. These are high resolution spectra of the Sun. Since the Sun is the closest star, we can get great data. We can then apply radial velocity modelling techniques to this data to see: if we hypothetically injected a planet would be able to detect that planet and discern it from noisy processes.
 
+There is a radial velocity tool, for fun, available at [astroaryan.space/](https://astroaryan.space/visualizations.html)
+
 ## Data description
 
 The data here are solar spectra from the NEID archive that I processed using the ESSP pipeline. We targeted observing days with at least 80 spectra, then took the 80 spectra closest to local noon. At each wavelength pixel, we combined those 80 observations using inverse variance weighting to boost the SNR. Each row in the saved spectra is therefore one daily averaged spectrum.
@@ -36,7 +38,7 @@ This folder contains the spectra and their uncertainties as NumPy arrays. Rows a
 | `spectra_kitcat_err.npy` | Uncertainties for the KITCAT spectra | `(340, 35166)` |
 
 ### support_files
-# Note, I believe these wavelength grids are in vaccuum, not air wavelength solutions. There is a conversion factor between the two.
+Note, I believe these wavelength grids are in vaccuum, not air wavelength solutions. There is a conversion factor between the two.
 
 - `wavelengths.npy`: the wavelength grid in Å for the regular spectra. matches the columns in `spectra.npy` and `spectra_err.npy`.
 - `waves_kitcat.txt`: the wavelength grid in Å for the KITCAT spectra. matches the columns in `spectra_kitcat.npy` and `spectra_kitcat_err.npy`.
